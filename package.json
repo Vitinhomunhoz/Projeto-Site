@@ -1,5 +1,18 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "react-router-dom": "^7.9.3"
+=======
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+>>>>>>> 151a88a1d19a67bd8a936f0020a3f4bf44f377b7
   }
 }

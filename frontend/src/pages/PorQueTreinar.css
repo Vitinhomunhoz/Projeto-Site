@@ -1,0 +1,55 @@
+/* frontend/src/pages/PorQueTreinar.css */
+
+.porque-treinar-container {
+  padding: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.porque-treinar-header {
+  margin-bottom: 2rem;
+}
+
+.porque-treinar-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.porque-treinar-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.beneficio-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.beneficio-card h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+.beneficio-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
