@@ -1,23 +1,49 @@
 import { useEffect, useState } from "react";
+import { getTreinos } from "./serviços/api";
+import { TreinoCard } from "./components/TreinoCard";
+import './App.css';
 
-type Ping =
-  | { ok: true; msg: string }
-  | { ok: false; error: string };
+// Novo tipo, agora com 'exercicios'
+type Treino = {
+  id: number;
+  nome: string;
+  exercicios: string[];
+};
 
 export default function App() {
-  const [status, setStatus] = useState<Ping | null>(null);
+  const [treinos, setTreinos] = useState<Treino[] | null>(null);
+  const [erro, setErro] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/ping")
-      .then(r => r.json())
-      .then(setStatus)
-      .catch(err => setStatus({ ok: false, error: String(err) }));
+    getTreinos()
+      .then(data => setTreinos(data))
+      .catch(err => {
+        console.error(err);
+        setErro(err.message);
+      });
   }, []);
 
   return (
-    <div style={{ fontFamily: "sans-serif", padding: 24 }}>
-      <h1>Gym App (Front)</h1>
-      <pre>{JSON.stringify(status, null, 2)}</pre>
+    <div className="app-container">
+      <header className="app-header">
+        <h1>Gym App</h1>
+        <p>Seus treinos da semana</p>
+      </header>
+
+      <main className="treinos-grid">
+        {erro && <p className="erro-mensagem">{erro}</p>}
+        
+        {!treinos && !erro && <p>Carregando treinos...</p>}
+        
+        {treinos && treinos.map(treino => (
+          // Agora passamos a lista de exercícios
+          <TreinoCard
+            key={treino.id}
+            nome={treino.nome}
+            exercicios={treino.exercicios}
+          />
+        ))}
+      </main>
     </div>
   );
 }
