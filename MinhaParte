@@ -1,0 +1,46 @@
+ Projeto de Site de Academia (FitLife Academy)
+
+Este é um projeto full-stack de um site para uma academia, construído para fins de aprendizado e portfólio. A aplicação possui um backend em Node.js que serve uma API RESTful e um frontend dinâmico e moderno construído com React e TypeScript.
+
+## Funcionalidades Implementadas
+
+O projeto foi estruturado para ser modular e escalável. As principais funcionalidades desenvolvidas são:
+
+* **Backend com API REST**: Um servidor robusto criado com Node.js e Express para gerenciar os dados da aplicação.
+* **Conexão com Banco de Dados**: Utiliza o Mongoose para se conectar e interagir com um banco de dados MongoDB.
+* **Frontend Moderno**: Interface de usuário reativa construída com React e Vite, utilizando TypeScript para maior segurança e manutenibilidade do código.
+* **Sistema de Roteamento**: Navegação entre múltiplas páginas sem a necessidade de recarregar o site, implementado com `react-router-dom`. As páginas atuais são:
+    * Página Inicial (`/`)
+    * Página de Treinos (`/treinos`)
+    * Página "Por Que Treinar?" (`/por-que-treinar`)
+* **Componentização**: O layout é dividido em componentes reutilizáveis como `Header`, `Footer` e `TreinoCard`, seguindo as melhores práticas do React.
+
+## Tecnologias Utilizadas
+
+### Backend
+* **Node.js**: Ambiente de execução do JavaScript no servidor.
+* **Express**: Framework para criação de APIs e gerenciamento de rotas.
+* **Mongoose**: Biblioteca para modelagem de dados do MongoDB.
+* **jsonwebtoken & bcryptjs**: Para autenticação e segurança de senhas.
+* **Nodemon**: Para reiniciar o servidor automaticamente durante o desenvolvimento.
+* **Dotenv**: Para gerenciar variáveis de ambiente.
+
+### Frontend
+* **React**: Biblioteca para construção da interface de usuário.
+* **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+* **Vite**: Ferramenta de build e servidor de desenvolvimento rápido para o frontend.
+* **React Router Dom**: Para gerenciamento das rotas da aplicação.
+
+## Como Executar o Projeto Localmente
+
+Para rodar este projeto na sua máquina, siga os passos abaixo.
+
+### Pré-requisitos
+* Node.js (versão 18 ou superior)
+* npm (geralmente instalado com o Node.js)
+* Um banco de dados MongoDB (pode ser local ou um serviço como o MongoDB Atlas)
+
+### 1. Clonar o Repositório
+```bash
+git clone [https://github.com/Vitinhomunhoz/Projeto-Site.git](https://github.com/Vitinhomunhoz/Projeto-Site.git)
+cd Projeto-Site
